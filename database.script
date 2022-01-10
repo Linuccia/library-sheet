@@ -1,0 +1,30 @@
+create table if not exists Users (
+    login    varchar(255) primary key,
+    password varchar(255) not null
+);
+
+create sequence if not exists Books_IDS start 1 increment 1;
+
+create table if not exists Books (
+    id int primary key,
+    name varchar(255) not null,
+    author varchar(255) not null,
+    count integer check ( count > -1 )
+);
+
+create table if not exists Readers (
+    name varchar(255) not null,
+    number varchar(255) primary key,
+    book_count integer check ( book_count > -1 ),
+    overdue bool not null,
+    blocked bool not null
+);
+
+create table if not exists Reader_Sheet (
+    reader_num varchar(255) references Readers (number) on delete cascade on update cascade,
+    book_id int references Books (id) on delete cascade,
+    start_date date not null,
+    end_date date not null check ( end_date > start_date ),
+    primary key (reader_num, book_id)
+);
+

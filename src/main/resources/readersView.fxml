@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="678.0" prefWidth="927.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox layoutY="33.0" prefHeight="414.0" prefWidth="202.0" style="-fx-background-color: white;">
+            <children>
+                <Button fx:id="readersButton" mnemonicParsing="false" prefHeight="138.0" prefWidth="250.0" style="-fx-background-color: #f2d17f; -fx-border-color: black;" text="Читатели">
+                    <font>
+                        <Font name="Calibri Light" size="21.0" />
+                    </font></Button>
+                <Button fx:id="booksButton" mnemonicParsing="false" prefHeight="138.0" prefWidth="230.0" style="-fx-background-color: #f2d17f; -fx-border-color: black;" text="Книги">
+                    <font>
+                        <Font name="Calibri Light" size="21.0" />
+                    </font></Button>
+                <Button fx:id="blackListButton" mnemonicParsing="false" prefHeight="138.0" prefWidth="222.0" style="-fx-background-color: #f2d17f; -fx-border-color: black;" text="Черный список">
+                    <font>
+                        <Font name="Calibri Light" size="21.0" />
+                    </font></Button>
+            </children>
+        </VBox>
+        <Pane layoutY="448.0" prefHeight="231.0" prefWidth="202.0" style="-fx-background-color: #fff8e9; -fx-border-color: black;" />
+        <Label fx:id="userLabel" layoutY="-2.0" prefHeight="35.0" prefWidth="202.0" style="-fx-label-padding: 5; -fx-background-color: #fff8e9; -fx-border-color: black;" text="User login">
+            <font>
+                <Font name="Calibri Light Italic" size="17.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Label>
+        <Pane layoutX="202.0" layoutY="-2.0" prefHeight="35.0" prefWidth="726.0" style="-fx-background-color: #fff8e9; -fx-border-color: black;" />
+        <Pane layoutX="202.0" layoutY="33.0" prefHeight="646.0" prefWidth="726.0" style="-fx-border-color: black;">
+         <children>
+            <TableView fx:id="readersTable" prefHeight="414.0" prefWidth="726.0" style="-fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="readerNameColumn" prefWidth="329.6000061035156" text="ФИО" />
+                <TableColumn fx:id="readerNumberColumn" prefWidth="143.20001220703125" text="Номер телефона" />
+                  <TableColumn fx:id="readerBookCountColumn" prefWidth="148.79998779296875" text="Кол-во книг на руках" />
+                  <TableColumn fx:id="overdueColumn" prefWidth="106.4000244140625" text="Просрочено" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchReaderField" layoutX="14.0" layoutY="438.0" prefHeight="28.0" prefWidth="202.0" />
+            <Button fx:id="searchReaderButton" layoutX="96.0" layoutY="481.0" mnemonicParsing="false" style="-fx-background-color: #ffe8b2; -fx-border-color: black;" text="Поиск по номеру">
+               <font>
+                  <Font name="Calibri Light Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="addReaderButton" layoutX="562.0" layoutY="495.0" mnemonicParsing="false" style="-fx-background-color: #ffe8b2; -fx-border-color: black;" text="Добавить читателя">
+               <font>
+                  <Font name="Calibri Light Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="blockButton" layoutX="592.0" layoutY="594.0" mnemonicParsing="false" style="-fx-background-color: coral; -fx-border-color: black;" text="В черный список">
+               <font>
+                  <Font name="Calibri Light Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="readerSheetButton" layoutX="564.0" layoutY="437.0" mnemonicParsing="false" style="-fx-background-color: #ffe8b2; -fx-border-color: black;" text="Читательский лист">
+               <font>
+                  <Font name="Calibri Light Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="checkButton" layoutX="445.0" layoutY="594.0" mnemonicParsing="false" style="-fx-background-color: darkkhaki; -fx-border-color: black;" text="Проверка">
+               <font>
+                  <Font name="Calibri Light Italic" size="14.0" />
+               </font>
+            </Button>
+         </children></Pane>
+    </children>
+</AnchorPane>

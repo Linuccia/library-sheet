@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="317.0" prefWidth="286.0" style="-fx-background-color: #fff8e9;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="72.0" layoutY="31.0" text="Добавить книгу">
+            <font>
+                <Font name="Calibri Light" size="23.0" />
+            </font>
+        </Label>
+        <VBox layoutX="14.0" layoutY="95.0" prefHeight="142.0" prefWidth="94.0">
+            <children>
+                <HBox prefHeight="46.0" prefWidth="258.0">
+                    <children>
+                        <Label text="Название: ">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="46.0" prefWidth="258.0">
+                    <children>
+                        <Label text="Автор:">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="46.0" prefWidth="258.0">
+                    <children>
+                        <Label text="Количество:">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox layoutX="106.0" layoutY="95.0" prefHeight="142.0" prefWidth="180.0">
+            <children>
+                <HBox prefHeight="46.0" prefWidth="258.0">
+               <children>
+                  <TextField fx:id="bookNameField" prefHeight="26.0" prefWidth="166.0" />
+               </children>
+                </HBox>
+                <HBox prefHeight="46.0" prefWidth="258.0">
+               <children>
+                  <TextField fx:id="authorField" prefHeight="26.0" prefWidth="166.0" />
+               </children>
+                </HBox>
+                <HBox prefHeight="46.0" prefWidth="258.0">
+               <children>
+                  <Spinner fx:id="countSpinner" prefHeight="20.0" prefWidth="55.0" />
+               </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Label fx:id="messageLabel" layoutX="31.0" layoutY="227.0" prefHeight="46.0" prefWidth="224.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+            <font>
+                <Font name="Calibri Light Italic" size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="okButton" layoutX="116.0" layoutY="274.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="54.0" style="-fx-background-color: #ffe8b2; -fx-border-color: black;" text="OK">
+            <font>
+                <Font name="Calibri Light Italic" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
